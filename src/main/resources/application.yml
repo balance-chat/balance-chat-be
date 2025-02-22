@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: BalanceChat
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/balancechat_localDB
+    username: root
+    password: mingwan
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+    com.example.BalanceChat: debug
+
+server:
+  port: 8080
